@@ -1,0 +1,43 @@
+<div class="container">
+    <h4>
+        Ajouter un document
+    </h4>
+    <div class="container">
+        <form #documentForm="ngForm">
+            <label for="cin"><strong>Name : (otional)</strong></label>
+            <input
+              class="form-control mr-sm-2 mb-2"
+              id="name"
+              type="text"
+              ngModel
+              name="name"
+            />
+            <label for="cin"><strong>Type :</strong></label>
+            <input
+              class="form-control mr-sm-2 mb-2"
+              id="type"
+              type="text"
+              ngModel
+              name="type"
+              required
+            />
+            <label for="file">Choose File</label>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              (change)="handleFileInput($event.target.files)"
+              required
+            />
+            <button
+              class="btn btn-success"
+              (click)="addDocument(documentForm)"
+              type="submit"
+              [disabled]="documentForm.invalid"
+            >
+              Add Document
+            </button>
+          </form>
+  
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h4>Student List</h4>
+  <div class="container mt-4">
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>CIN</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Birth day</th>
+          <th>phone</th>
+          <th>Baccalaureate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of students">
+          <th>{{ s.cin }}</th>
+          <th>{{ s.fn }}</th>
+          <th>{{ s.ln }}</th>
+          <th>{{ s.bd }}</th>
+          <th>{{ s.ph }}</th>
+          <th>{{ s.bac }}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

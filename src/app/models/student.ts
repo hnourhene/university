@@ -1,0 +1,23 @@
+export class Student{
+  cin;
+  firstName;
+  lastName;
+  birthDay;
+  phone;
+  baccalaureate;
+  constructor(
+    cin,
+    firstName,
+    lastName,
+    birthDay,
+    phone,
+    baccalaureate
+  ){
+    this.cin=cin;
+    this.firstName=firstName;
+    this.firstName=lastName;
+    this.birthDay=birthDay;
+    this.phone=phone;
+    this.baccalaureate=baccalaureate;
+  }
+}

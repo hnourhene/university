@@ -1,0 +1,58 @@
+<div class="container">
+    <h4>
+        Liste de Documents
+    </h4>
+    <div class="container">
+        <table class="table table-striped table-hover table-bordered">
+            <thead class="text-warning">
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Upload date</th>
+                <th>File type</th>
+                <th>File size</th>
+                <th>Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <th>11111111</th>
+                <th>Nourhene</th>
+                <th>Hammami</th>
+                <th>14/08/1998</th>
+                <th>52945000</th>
+                <th>Maths</th>
+            
+              
+              </tr> -->
+              <tr>
+                <th>Projet LL.pdf</th>
+                <th>pdf</th>
+                <th>17/01/2021</th>
+                <th>application/pdf</th>
+                <th>156159 octet</th>
+                <th>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="assets/files/Projet LL.pdf"
+                    ><i class="material-icons">content_paste</i></a
+                  >
+                </th>
+              </tr>
+              <tr *ngFor="let d of documents">
+                <th>{{ d.name }}</th>
+                <th>{{ d.type }}</th>
+                <th>{{ d.file.lastModified | date: "dd/MM/yyyy" }}</th>
+                <th>{{ d.file.type }}</th>
+                <th>{{ d.file.size }} octet</th>
+                <th>
+                  <i class="material-icons" (click)="downloadFile(d.file)"
+                    >content_paste</i
+                  >
+                </th>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

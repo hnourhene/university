@@ -1,0 +1,69 @@
+<div class="container mt-4">
+  <h4>Add Student</h4>
+  <div class="container mt-4">
+    <form #studentForm="ngForm">
+      <label for="cin"><strong>CIN:</strong></label>
+      <input
+        class="form-control mr-sm-2 mb-2"
+        id="cin"
+        type="text"
+        ngModel
+        name="cin"
+        required
+      />
+      <label for="fn"><strong>Firstname:</strong></label>
+      <input
+        class="form-control mr-sm-2 mb-2"
+        id="fn"
+        type="text"
+        ngModel
+        name="fn"
+        required
+      />
+      <label for="ln"><strong>Lastname:</strong></label>
+      <input
+        class="form-control mr-sm-2 mb-2"
+        id="ln"
+        type="text"
+        ngModel
+        name="ln"
+        required
+      />
+      <label for="bd"><strong>Birth day:</strong></label>
+      <input
+        class="form-control mr-sm-2 mb-2"
+        id="bd"
+        type="text"
+        ngModel
+        name="bd"
+        required
+      />
+      <label for="ph"><strong>Phone:</strong></label>
+      <input
+        class="form-control mr-sm-2 mb-2"
+        id="ph"
+        type="text"
+        ngModel
+        name="ph"
+        required
+      />
+      <label for="bac"><strong>baccalaureate:</strong></label>
+      <input
+        class="form-control mr-sm-2 mb-4"
+        id="bac"
+        type="text"
+        ngModel
+        name="bac"
+        required
+      />
+      <button
+        class="btn btn-primary"
+        (click)="addStudent(studentForm)"
+        type="submit"
+        [disabled]="studentForm.invalid"
+      >
+        Add Student
+      </button>
+    </form>
+  </div>
+</div>
